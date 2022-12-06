@@ -13,9 +13,13 @@ import logoNextjs from '@/images/logos/next-js-logo.png'
 import logoNetlify from '@/images/logos/logo-netlify.png'
 import logoSanity from '@/images/logos/sanity.png'
 import logoOpenAi from '@/images/logos/openai.png'
+import logoOpenAi2 from '@/images/logos/openai-avatar.png'
+import logoPinata from '@/images/logos/Pinata-logo.avif'
+import logoMetamask from '@/images/logos/MetaMask_Fox.svg.png'
+import logoThirdweb from '@/images/logos/ThirdWeb-logo.jpg'
+import logoEth from '@/images/logos/eth-hd-logo.png'
 
 const projects = [
-
   {
     name: 'Sanity',
     description:
@@ -35,7 +39,7 @@ const projects = [
     description: 'Sripe is a Payment processor for online-merchants.',
     link: { href: 'https://www.stripe.com/', label: 'stripe.com' },
     logo: logoStripe,
-  },  
+  },
   {
     name: 'Netlify',
     description:
@@ -56,49 +60,35 @@ const projects = [
     link: { href: 'https://vercel.com', label: 'vercel.com' },
     logo: logoVercel,
   },
-  {
-    name: 'Tailwindcss',
-    description:
-      'Rapidly build modern websites without ever leaving your HTML.',
-    link: { href: 'https://tailwindcss.com', label: 'tailwindcss.com' },
-    logo: logoTailwind,
-  },
-  {
-    name: 'Photoshop',
-    description:
-      'Photoshop is the oldest image editing software, it was created in 1988 !',
-    link: {
-      href: 'https://www.adobe.com/products/photoshop.html',
-      label: 'photoshop.com',
-    },
-    logo: logoPhotoshop,
-  },
 ]
-const web3 = [
-
+const web3 = [  
+  {
+    name: 'Metamask',
+    description: 'Web3 wallet extension, you can add it to your browser.',
+    link: { href: 'https://www.metamask.io', label: 'metamask.io' },
+    logo: logoMetamask,
+  },
   {
     name: 'ThirdWeb',
     description:
-      'Sanity is the CMS platform for structured content that powers remarkable digital experiences.',
-    link: { href: 'https://www.sanity.io/', label: 'sanity.io' },
-    logo: logoSanity,
+      'I think work with these Web3 platform is much easier to use, maybe i develop something new... stay tuned !',
+    link: { href: 'https://www.thirdweb.com', label: 'thirdweb.com' },
+    logo: logoThirdweb,
   },
   {
     name: 'Pinata',
-    description:
-      'Shopify is the most popular ecommerce platform management in the world. Thrusted by millions of merchants worldwide.',
-    link: { href: 'https://www.shopify.com/', label: 'shopify.com' },
-    logo: logoShopify,
+    description: 'NFT Web3 platform.',
+    link: { href: 'https://www.pinata.com/', label: 'pinata.com' },
+    logo: logoPinata,
   },
   {
-    name: 'Opensea',
-    description: 'Sripe is a Payment processor for online-merchants.',
-    link: { href: 'https://www.stripe.com/', label: 'stripe.com' },
-    logo: logoStripe,
-  },  
+    name: 'Ethereum',
+    description: 'Cryptocurrency build by Devs for the Futur !',
+    link: { href: 'https://www.eth.org/', label: 'eth.org' },
+    logo: logoEth,
+  },
 ]
 const ai = [
-
   {
     name: 'ChatGPT-3',
     description:
@@ -109,9 +99,9 @@ const ai = [
   {
     name: 'Dall-e-2',
     description:
-      'Shopify is the most popular ecommerce platform management in the world. Thrusted by millions of merchants worldwide.',
-    link: { href: 'https://www.shopify.com/', label: 'shopify.com' },
-    logo: logoOpenAi,
+      'Dall-e-2 is a prompt image generator, hard to understand at the beginning but magic in the right fingers.',
+    link: { href: 'https://openai.com/dall-e-2//', label: 'dall-e-2.openai.com' },
+    logo: logoOpenAi2,
   },
 ]
 function LinkIcon(props) {
@@ -169,7 +159,7 @@ export default function Projects() {
       </SimpleLayout>
       <SimpleLayout
         title="Web3"
-        intro="Im already learn a lot about the Web 3, decentralized website and more."
+        intro="Im also learn a lot about the Web 3, decentralized web and NFT."
       >
         <ul
           role="list"
@@ -199,9 +189,9 @@ export default function Projects() {
           ))}
         </ul>
       </SimpleLayout>
-            <SimpleLayout
+      <SimpleLayout
         title="Ai"
-        intro="For sure, Im use these Beautiful AI powered tools from OpenAi. Thanks E.Musk !"
+        intro="Actually, I try & learn how to use these two AI tools. Thanks E.Musk & Sam Altman !"
       >
         <ul
           role="list"
