@@ -10,25 +10,12 @@ import logoShopify from '@/images/logos/shopify.png'
 import logoVercel from '@/images/logos/vercel.png'
 import logoTailwind from '@/images/logos/Tailwind_CSS_Logo.svg.png'
 import logoNextjs from '@/images/logos/next-js-logo.png'
-import logoOvh from '@/images/logos/ovh.png'
 import logoNetlify from '@/images/logos/logo-netlify.png'
 import logoSanity from '@/images/logos/sanity.png'
+import logoOpenAi from '@/images/logos/openai.png'
 
 const projects = [
-  {
-    name: 'OVHcloud',
-    description:
-      'Cloud solution based in France, EU. Web hosting, domain, server etc...',
-    link: { href: 'https://www.ovhcloud.com/', label: 'ovhcloud.com' },
-    logo: logoOvh,
-  },
-  {
-    name: 'Netlify',
-    description:
-      'The fastest way to combine your favorite tools and APIs to build the fastest sites, stores, and apps for the web.',
-    link: { href: 'https://www.netlify.com/', label: 'netlify.com' },
-    logo: logoNetlify,
-  },
+
   {
     name: 'Sanity',
     description:
@@ -48,6 +35,13 @@ const projects = [
     description: 'Sripe is a Payment processor for online-merchants.',
     link: { href: 'https://www.stripe.com/', label: 'stripe.com' },
     logo: logoStripe,
+  },  
+  {
+    name: 'Netlify',
+    description:
+      'The fastest way to combine your favorite tools and APIs to build the fastest sites, stores, and apps for the web.',
+    link: { href: 'https://www.netlify.com/', label: 'netlify.com' },
+    logo: logoNetlify,
   },
   {
     name: 'Nextjs',
@@ -78,6 +72,46 @@ const projects = [
       label: 'photoshop.com',
     },
     logo: logoPhotoshop,
+  },
+]
+const web3 = [
+
+  {
+    name: 'ThirdWeb',
+    description:
+      'Sanity is the CMS platform for structured content that powers remarkable digital experiences.',
+    link: { href: 'https://www.sanity.io/', label: 'sanity.io' },
+    logo: logoSanity,
+  },
+  {
+    name: 'Pinata',
+    description:
+      'Shopify is the most popular ecommerce platform management in the world. Thrusted by millions of merchants worldwide.',
+    link: { href: 'https://www.shopify.com/', label: 'shopify.com' },
+    logo: logoShopify,
+  },
+  {
+    name: 'Opensea',
+    description: 'Sripe is a Payment processor for online-merchants.',
+    link: { href: 'https://www.stripe.com/', label: 'stripe.com' },
+    logo: logoStripe,
+  },  
+]
+const ai = [
+
+  {
+    name: 'ChatGPT-3',
+    description:
+      'ChatGPT is an experimental chatbot created by OpenAI and based on its autocomplete text generator GPT-3.5. ',
+    link: { href: 'https://chat.openai.com/chat', label: 'chat.openai.com' },
+    logo: logoOpenAi,
+  },
+  {
+    name: 'Dall-e-2',
+    description:
+      'Shopify is the most popular ecommerce platform management in the world. Thrusted by millions of merchants worldwide.',
+    link: { href: 'https://www.shopify.com/', label: 'shopify.com' },
+    logo: logoOpenAi,
   },
 ]
 function LinkIcon(props) {
@@ -136,7 +170,67 @@ export default function Projects() {
       <SimpleLayout
         title="Web3"
         intro="Im already learn a lot about the Web 3, decentralized website and more."
-      ></SimpleLayout>
+      >
+        <ul
+          role="list"
+          className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          {web3.map((project) => (
+            <Card as="li" key={project.name}>
+              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                <Image
+                  src={project.logo}
+                  alt=""
+                  className="h-8 w-8 rounded-full bg-white"
+                  unoptimized
+                />
+              </div>
+              <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                <Card.Link href={project.link.href} target="_blank">
+                  {project.name}
+                </Card.Link>
+              </h2>
+              <Card.Description>{project.description}</Card.Description>
+              <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+                <LinkIcon className="h-6 w-6 flex-none" />
+                <span className="ml-2">{project.link.label}</span>
+              </p>
+            </Card>
+          ))}
+        </ul>
+      </SimpleLayout>
+            <SimpleLayout
+        title="Ai"
+        intro="For sure, Im use these Beautiful AI powered tools from OpenAi. Thanks E.Musk !"
+      >
+        <ul
+          role="list"
+          className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          {ai.map((project) => (
+            <Card as="li" key={project.name}>
+              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                <Image
+                  src={project.logo}
+                  alt=""
+                  className="h-8 w-8 rounded-full bg-white"
+                  unoptimized
+                />
+              </div>
+              <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                <Card.Link href={project.link.href} target="_blank">
+                  {project.name}
+                </Card.Link>
+              </h2>
+              <Card.Description>{project.description}</Card.Description>
+              <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+                <LinkIcon className="h-6 w-6 flex-none" />
+                <span className="ml-2">{project.link.label}</span>
+              </p>
+            </Card>
+          ))}
+        </ul>
+      </SimpleLayout>
     </>
   )
 }

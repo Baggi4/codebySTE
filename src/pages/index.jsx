@@ -17,7 +17,7 @@ import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
-import logoCodebySTE from '@/images/logos/DALL-E.png'
+import logoCodebySTE from '@/images/logos/Ste-logo.png'
 import logoOc from '@/images/logos/openclassrooms.jpeg'
 
 import { generateRssFeed } from '@/lib/generateRssFeed'
@@ -141,7 +141,7 @@ function Resume() {
       company: 'codebySTE',
       title: 'CEO',
       logo: logoCodebySTE,
-      start: '2021',
+      start: '2020',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear(),
@@ -151,8 +151,8 @@ function Resume() {
       company: 'Openclassrooms',
       title: 'Student',
       logo: logoOc,
-      start: '2020',
-      end: '2021',
+      start: '2019',
+      end: '2020',
     },
   ]
 

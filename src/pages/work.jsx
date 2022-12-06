@@ -60,15 +60,15 @@ const projects = [
     image: image2,
   },
   {
-    name: 'Salient',
-    label: 'SaaS marketing',
+    name: 'Mallier',
+    label: 'Direct-to-customer ecommerce',
     description:
-      'Every SaaS marketing site uses the same formula — a hero, feature sections, some testimonials, you know the drill. But some are prettier than others.',
-    link: { href: 'https://salient.tailwindui.com/' },
+      'Minimalist Direct-to-Customer web-app powered by NextJs && Stripe',
+    link: { href: 'https://mallier.vercel.app' },
     image: image3,
   },
   {
-    name: 'Kawaii',
+    name: 'Kanap',
     label: 'Shopify ecommerce',
     description:
       'Headless ecommerce powered by Vercel & Shopify',
@@ -76,10 +76,10 @@ const projects = [
     image: image4,
   },
   {
-    name: 'Bunddle',
+    name: 'Salierr',
     label: 'Shopify ecommerce',
     description:
-      'Headless ecommerce powered by Tailwindui & Shopify',
+      'Headless ecommerce powered by Nextjs && Shopify',
     link: { href: 'https://remixshopify.mcan.sh' },
     image: image5,
   },
