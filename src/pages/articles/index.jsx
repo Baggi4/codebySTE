@@ -45,7 +45,7 @@ export default function ArticlesIndex({ articles }) {
         />
       </Head>
       <SimpleLayout
-        title="Writing on things-to-know about starting a web business."
+        title="Writing about Web development tools."
         intro="All of my long-form thoughts on programming, product design, ai ,and more, collected in chronological order."
       >
         <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">

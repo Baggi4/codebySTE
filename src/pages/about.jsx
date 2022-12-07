@@ -71,7 +71,7 @@ export default function About() {
                 taught myself to type on.
               </p>
               <p>
-                Today, I’m looking to build the most projects as possible, starting to the finish.
+                Today, I’m looking to build new projects, start to the finish.
               </p>
               <p>
                 Quote:La peur vient toujours quand vous éprouvez des problèmes à faire
