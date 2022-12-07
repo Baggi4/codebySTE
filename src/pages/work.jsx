@@ -44,31 +44,7 @@ function LinkIcon(props) {
 
 const projects = [
   {
-    name: 'Pocket',
-    label: 'App marketing',
-    description:
-      'You have been working hard for months on that new native iOS app and you are finally ready to launch. Take a break from writing Swift to create a beautiful marketing site for your app.',
-    link: { href: 'https://pocket.tailwindui.com/' },
-    image: image1,
-  },
-  {
-    name: 'Primer',
-    label: 'Info product',
-    description:
-      'We have actually published four info products ourselves and this landing page is honestly better than the sites we designed for all of those.',
-    link: { href: 'https://primer.tailwindui.com/' },
-    image: image2,
-  },
-  {
-    name: 'Mallier',
-    label: 'Direct-to-customer ecommerce',
-    description:
-      'Minimalist Direct-to-Customer web-app powered by NextJs && Stripe',
-    link: { href: 'https://mallier.vercel.app' },
-    image: image3,
-  },
-  {
-    name: 'Kanap',
+    name: 'KawaE',
     label: 'Shopify ecommerce',
     description:
       'Headless ecommerce powered by Vercel & Shopify',
@@ -76,7 +52,7 @@ const projects = [
     image: image4,
   },
   {
-    name: 'Salierr',
+    name: 'Remix',
     label: 'Shopify ecommerce',
     description:
       'Headless ecommerce powered by Nextjs && Shopify',
