@@ -45,7 +45,7 @@ function LinkIcon(props) {
 const projects = [
   {
     name: 'KawaE',
-    label: 'Shopify ecommerce',
+    label: 'Shopify Ecommerce',
     description:
       'Headless ecommerce powered by Vercel & Shopify',
     link: { href: 'https://nextjs-demo-ecommerce-psr0vi9iw-codebyste.vercel.app' },
@@ -53,9 +53,9 @@ const projects = [
   },
   {
     name: 'Remix',
-    label: 'Shopify ecommerce',
+    label: 'Shopify Digital Ecommerce',
     description:
-      'Headless ecommerce powered by Nextjs && Shopify',
+      'Headless digital ecommerce',
     link: { href: 'https://remixshopify.mcan.sh' },
     image: image5,
   },
@@ -92,10 +92,10 @@ export default function Work() {
                 <span className="relative z-20 text-sm text-teal-500">{project.label}</span>
 
                 <Card.Description>{project.description}</Card.Description>
-                <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
+                <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition dark:text-zinc-200">
                   <button
                     type="button"
-                    className="inline-flex items-center rounded-md border border-gray-300 bg-gray-200 px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:ring-indigo-500"
+                    className="inline-flex items-center rounded-md border border-gray-300 bg-gray-200  px-4 py-2 text-base font-medium text-gray-700 shadow-sm"
                   >
                     <span className="ml-2">Live Demo</span>
                     <LinkIcon className="h-6 w-6 flex-none pl-1" target="_blank"/>
