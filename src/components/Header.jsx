@@ -125,8 +125,8 @@ function MobileNavigation(props) {
                 <MobileNavItem href="/articles">Articles</MobileNavItem>
                 <MobileNavItem href="/features">Features</MobileNavItem>
                 <MobileNavItem href="/work">Work</MobileNavItem>
+                <MobileNavItem href="/purchase">Purchase</MobileNavItem>
                 <MobileNavItem href="/uses">Uses</MobileNavItem>
-                <MobileNavItem href="/about">About</MobileNavItem>
               </ul>
             </nav>
           </Popover.Panel>
@@ -166,8 +166,8 @@ function DesktopNavigation(props) {
         <NavItem href="/articles">Articles</NavItem>
         <NavItem href="/features">Features</NavItem>
         <NavItem href="/work">Work</NavItem>
+        <NavItem href="/purchase">Purchase</NavItem>
         <NavItem href="/uses">Uses</NavItem>
-        <NavItem href="/about">About</NavItem>
       </ul>
     </nav>
   )
@@ -219,7 +219,7 @@ function AvatarContainer({ className, ...props }) {
     <div
       className={clsx(
         className,
-        'h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1.5 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90  transition hover:scale-110 dark:ring-white/10 dark:hover:ring-white/20'
+        'ring-1.5 h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur transition  hover:scale-110 dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20'
       )}
       {...props}
     />

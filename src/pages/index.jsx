@@ -204,7 +204,6 @@ function Resume() {
     </div>
   )
 }
-
 function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
 
@@ -275,6 +274,13 @@ export default function Home({ articles }) {
               aria-label="Follow on GitHub"
               icon={DiscordIcon}
             />
+            <SocialLink
+                href="mailto:codebyste@gmail.com"
+                icon={MailIcon}
+                className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
+              >
+                codebyste@gmail.com
+              </SocialLink>
           </div>
         </div>
       </Container>

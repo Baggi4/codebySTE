@@ -23,8 +23,8 @@ export function Footer() {
               <div className="flex gap-6 text-sm font-medium text-zinc-800 dark:text-zinc-200">
                 <NavLink href="/features">Features</NavLink>
                 <NavLink href="/work">Work</NavLink>
+                <NavLink href="/purchase">Purchase</NavLink>
                 <NavLink href="/uses">Uses</NavLink>
-                <NavLink href="/about">About</NavLink>
               </div>
               <p className="text-sm text-zinc-400 dark:text-zinc-500">
                 &copy; {new Date().getFullYear()} codebySte. All rights
