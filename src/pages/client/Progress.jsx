@@ -1,37 +1,42 @@
+import React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
+import clsx from 'clsx'
+import Image from 'next/image'
+
+import image1 from '@/images/photos/banner_1.png'
+import { Container } from '@/components/Container'
 import { CheckIcon } from '@heroicons/react/24/solid'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import { InfoIcon } from '@/components/SocialIcons'
 
 const steps = [
-  { id: '01', name: 'Job details', href: '#', status: 'complete' },
-  { id: '02', name: 'App form', href: '/client/Progress', status: 'current' },
-  { id: '03', name: 'Preview', href: '#', status: 'upcoming' },
-  { id: '05', name: 'Revision(s)', href: '#', status: 'upcoming' },
-  { id: '06', name: 'Complete', href: '#', status: 'upcoming' },
+  { id: '01', name: 'Job details', status: 'complete' },
+  { id: '02', name: 'App form', status: 'complete' },
+  { id: '03', name: 'Preview', status: 'current' },
+  { id: '05', name: 'Revision(s)', status: 'upcoming' },
+  { id: '06', name: 'Complete', status: 'upcoming' },
 ]
-export default function ThankYou() {
+export default function AppForm() {
   return (
     <>
       <Head>
-        <title>Thank you - Steven.M</title>
-        <meta name="description" content="Thanks for choising codebySTE." />
+        <title>Progress - codebySte</title>
+        <meta name="description" content="Your Progress." />
       </Head>
-      <SimpleLayout
-        title="Thanks for choising codebySTE."
-        intro="You'll receive an email when the project start."
-      >
+      <Container className="mt-10">
+        <SimpleLayout
+        title="Progress."
+        intro="Your Website progress will be fecth here, password or personals data 'll not be displayed."
+      ></SimpleLayout>
         <nav aria-label="Progress">
           <ol
             role="list"
-            className="divide-y divide-gray-300 rounded-md border border-gray-300 md:flex md:divide-y-0"
+            className="divide-y divide-gray-300 truncate rounded-md border border-gray-300 md:flex md:divide-y-0"
           >
             {steps.map((step, stepIdx) => (
               <li key={step.name} className="relative md:flex md:flex-1">
                 {step.status === 'complete' ? (
-                  <a
-                    className="group flex w-full items-center"
-                  >
+                  <div className="group flex w-full items-center">
                     <span className="flex items-center px-6 py-4 text-sm font-medium">
                       <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-teal-600 group-hover:bg-teal-800">
                         <CheckIcon
@@ -43,10 +48,9 @@ export default function ThankYou() {
                         {step.name}
                       </span>
                     </span>
-                  </a>
+                  </div>
                 ) : step.status === 'current' ? (
-                  <a
-                    href={step.href}
+                  <div
                     className="flex items-center px-6 py-4 text-sm font-medium"
                     aria-current="step"
                   >
@@ -56,12 +60,9 @@ export default function ThankYou() {
                     <span className="ml-4 text-sm font-medium text-teal-600">
                       {step.name}
                     </span>
-                    <span className="m-2">
-                      <InfoIcon aria-hidden="true" />
-                    </span>
-                  </a>
+                  </div>
                 ) : (
-                  <a href={step.href} className="group flex items-center">
+                  <div className="group flex items-center">
                     <span className="flex items-center px-6 py-4 text-sm font-medium">
                       <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 border-gray-300 group-hover:border-gray-400">
                         <span className="text-gray-500 group-hover:text-gray-900">
@@ -72,7 +73,7 @@ export default function ThankYou() {
                         {step.name}
                       </span>
                     </span>
-                  </a>
+                  </div>
                 )}
 
                 {stepIdx !== steps.length - 1 ? (
@@ -102,8 +103,8 @@ export default function ThankYou() {
             ))}
           </ol>
         </nav>
-        <h2></h2>
-      </SimpleLayout>
+        <Image className="mt-8 relative rounded-lg object-cover shadow-lg" src={image1} alt="Capt" />
+      </Container>
     </>
   )
 }

@@ -105,8 +105,7 @@ function Resume() {
               <Image
                 src={role.logo}
                 alt=""
-                className="h-7 w-7 rounded-full"
-                unoptimized
+                className="h-8 w-8 rounded-full"
               />
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">

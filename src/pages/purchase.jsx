@@ -1,9 +1,8 @@
 import Head from 'next/head'
-import Link from 'next/link'
-import clsx from 'clsx'
+
 import Image from 'next/image'
 import imageCarrd from '@/images/photos/Carrd.png'
-import { Container } from '@/components/Container'
+import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 
@@ -16,14 +15,16 @@ function LinkIcon(props) {
       {...props}
     >
       <path
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
+        className='ml-1.5 h-5 w-5 fill-zinc-100'
       />
       <path
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
+        className='ml-1.5 h-5 w-5 fill-zinc-100'
       />
     </svg>
   )
@@ -66,8 +67,9 @@ export default function Purchase() {
                     src={project.image}
                     alt=""
                   />
-                </div><div className="relative z-10 float-right">
-                  <span className="flex rounded-full bg-green-100 px-4 py-0.75 text-sm font-medium text-green-800">
+                </div>
+                <div className="relative z-10 float-right">
+                  <span className="py-0.75 flex rounded-full bg-green-100 px-4 text-sm font-medium text-green-800">
                     Free
                   </span>
                 </div>
@@ -76,21 +78,19 @@ export default function Purchase() {
                     {project.name}
                   </Card.Link>
                 </h2>
-                
 
                 <Card.Description>{project.description}</Card.Description>
-                <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
-                  <button
-                    type="button"
-                    className="hover:indigo-500 inline-flex items-center rounded-md border border-gray-300 bg-gray-200 px-4 py-2 text-base font-medium text-gray-700 shadow-sm"
-                  >
-                    <span className="ml-2">Live Demo</span>
-                    <LinkIcon
-                      className="h-6 w-6 flex-none pl-1"
-                      target="_blank"
-                    />
-                  </button>
-                </p>
+                <div className="z-50">
+                <Button
+                  type="button"
+                  className="inline-flex justify-center rounded-lg text-base font-semibold py-3 px-4 bg-slate-900 text-white "
+                >
+                  <span className="ml-2">Live Demo</span>
+                  <LinkIcon
+                    className="h-6 w-6 flex-none pl-1"
+                    target="_blank"
+                  />
+                </Button></div>
               </div>
             </Card>
           ))}

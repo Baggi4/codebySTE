@@ -14,7 +14,7 @@ import logoNetlify from '@/images/logos/logo-netlify.png'
 import logoSanity from '@/images/logos/sanity.png'
 import logoOpenAi from '@/images/logos/openai.png'
 import logoOpenAi2 from '@/images/logos/openai-avatar.png'
-import logoPinata from '@/images/logos/Pinata-logo.avif'
+import logoPinata from '@/images/logos/Pinata.png'
 import logoMetamask from '@/images/logos/MetaMask_Fox.svg.png'
 import logoThirdweb from '@/images/logos/ThirdWeb-logo.jpg'
 import logoEth from '@/images/logos/eth-hd-logo.png'
@@ -139,7 +139,7 @@ export default function Projects() {
                 <Image
                   src={project.logo}
                   alt=""
-                  className="h-8 w-8 rounded-full bg-white"
+                  className="h-9 w-9 rounded-full"
                   unoptimized
                 />
               </div>
@@ -171,7 +171,7 @@ export default function Projects() {
                 <Image
                   src={project.logo}
                   alt=""
-                  className="h-8 w-8 rounded-full bg-white"
+                  className="h-9 w-9 rounded-full"
                   unoptimized
                 />
               </div>
@@ -203,7 +203,7 @@ export default function Projects() {
                 <Image
                   src={project.logo}
                   alt=""
-                  className="h-8 w-8 rounded-full bg-white"
+                  className="h-9 w-9 rounded-full"
                   unoptimized
                 />
               </div>
