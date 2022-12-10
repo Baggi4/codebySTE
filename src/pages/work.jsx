@@ -62,7 +62,7 @@ export default function Work() {
   return (
     <>
       <Head>
-        <title>Work - Steven.M</title>
+        <title>Work - codebySte</title>
         <meta name="description" content="I’ve build many ecomerce website" />
       </Head>
       <SimpleLayout

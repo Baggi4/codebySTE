@@ -1,14 +1,17 @@
 import { Container } from "@/components/Container"
+import { SimpleLayout } from "@/components/SimpleLayout"
 
 export default function Form() {
   return (
-    <Container>
-      <div>
+<SimpleLayout
+        title="Form."
+        intro="Complete your project informations."
+      ><div>
         <div className="mt-8 md:grid md:grid-cols-3 md:gap-6">
           <div className="md:col-span-1">
             <div className="px-4 sm:px-0">
-              <h3 className="text-lg font-medium leading-6 text-gray-900">Profile</h3>
-              <p className="mt-1 text-sm text-gray-600">
+              <h3 className="text-lg font-medium leading-6 text-zinc-800 dark:text-zinc-100">Profile</h3>
+              <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
                 This information will be displayed publicly so be careful what you share.
               </p>
             </div>
@@ -19,8 +22,8 @@ export default function Form() {
                 <div className="space-y-6 bg-white px-4 py-5 sm:p-6">
                   <div className="grid grid-cols-3 gap-6">
                     <div className="col-span-3 sm:col-span-2">
-                      <label htmlFor="company-website" className="block text-sm font-medium text-gray-700">
-                        Website
+                      <label htmlFor="company-website" className="block text-sm font-medium text-zinc-800">
+                        Your Domain Website
                       </label>
                       <div className="mt-1 flex rounded-md shadow-sm">
                         <span className="inline-flex items-center rounded-l-md border border-r-0 border-gray-300 bg-gray-50 px-3 text-sm text-gray-500">
@@ -39,42 +42,22 @@ export default function Form() {
 
                   <div>
                     <label htmlFor="about" className="block text-sm font-medium text-gray-700">
-                      About
+                      Description
                     </label>
                     <div className="mt-1">
                       <textarea
                         id="about"
                         name="about"
                         rows={3}
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        placeholder="you@example.com"
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 italic sm:text-sm"
+                        placeholder="describe your project most as possible..."
                         defaultValue={''}
                       />
                     </div>
-                    <p className="mt-2 text-sm text-gray-500">
-                      Brief description for your profile. URLs are hyperlinked.
-                    </p>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700">Photo</label>
-                    <div className="mt-1 flex items-center">
-                      <span className="inline-block h-12 w-12 overflow-hidden rounded-full bg-gray-100">
-                        <svg className="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
-                        </svg>
-                      </span>
-                      <button
-                        type="button"
-                        className="ml-5 rounded-md border border-gray-300 bg-white py-2 px-3 text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                      >
-                        Change
-                      </button>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700">Cover photo</label>
+                    <label className="block text-sm font-medium text-gray-700">Image Upload</label>
                     <div className="mt-1 flex justify-center rounded-md border-2 border-dashed border-gray-300 px-6 pt-5 pb-6">
                       <div className="space-y-1 text-center">
                         <svg
@@ -130,8 +113,8 @@ export default function Form() {
         <div className="md:grid md:grid-cols-3 md:gap-6">
           <div className="md:col-span-1">
             <div className="px-4 sm:px-0">
-              <h3 className="text-lg font-medium leading-6 text-gray-900">Personal Information</h3>
-              <p className="mt-1 text-sm text-gray-600">Use a permanent address where you can receive mail.</p>
+              <h3 className="text-lg font-medium leading-6 text-zinc-800 dark:text-zinc-100">Personal Information</h3>
+              <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Use a permanent address where you can receive mail.</p>
             </div>
           </div>
           <div className="mt-5 md:col-span-2 md:mt-0">
@@ -271,8 +254,8 @@ export default function Form() {
         <div className="md:grid md:grid-cols-3 md:gap-6">
           <div className="md:col-span-1">
             <div className="px-4 sm:px-0">
-              <h3 className="text-lg font-medium leading-6 text-gray-900">Notifications</h3>
-              <p className="mt-1 text-sm text-gray-600">Decide which communications you&apos;d like to receive and how.</p>
+              <h3 className="text-lg font-medium leading-6 text-zinc-800 dark:text-zinc-100">Notifications</h3>
+              <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Decide which communications you&apos;d like to receive and how.</p>
             </div>
           </div>
           <div className="mt-5 md:col-span-2 md:mt-0">
@@ -380,7 +363,7 @@ export default function Form() {
                     type="submit"
                     className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                   >
-                    Save
+                    Send
                   </button>
                 </div>
               </div>
@@ -388,6 +371,6 @@ export default function Form() {
           </div>
         </div>
       </div>
-    </Container>
+    </SimpleLayout>
   )
 }

@@ -5,7 +5,7 @@ import { InfoIcon } from '@/components/SocialIcons'
 
 const steps = [
   { id: '01', name: 'Job details', href: '#', status: 'complete' },
-  { id: '02', name: 'App form', href: '/client/Progress', status: 'current' },
+  { id: '02', name: 'Build', href: '/client/Progress', status: 'current' },
   { id: '03', name: 'Preview', href: '#', status: 'upcoming' },
   { id: '05', name: 'Revision(s)', href: '#', status: 'upcoming' },
   { id: '06', name: 'Complete', href: '#', status: 'upcoming' },
@@ -14,7 +14,7 @@ export default function ThankYou() {
   return (
     <>
       <Head>
-        <title>Thank you - Steven.M</title>
+        <title>Thank you - codebySte</title>
         <meta name="description" content="Thanks for choising codebySTE." />
       </Head>
       <SimpleLayout

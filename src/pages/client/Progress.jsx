@@ -11,7 +11,7 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 
 const steps = [
   { id: '01', name: 'Job details', status: 'complete' },
-  { id: '02', name: 'App form', status: 'complete' },
+  { id: '02', name: 'Build', status: 'complete' },
   { id: '03', name: 'Preview', status: 'current' },
   { id: '05', name: 'Revision(s)', status: 'upcoming' },
   { id: '06', name: 'Complete', status: 'upcoming' },
@@ -21,13 +21,12 @@ export default function AppForm() {
     <>
       <Head>
         <title>Progress - codebySte</title>
-        <meta name="description" content="Your Progress." />
-      </Head>
-      <Container className="mt-10">
+        <meta name="description" content="Progress - codebySte" />
+      </Head>     
         <SimpleLayout
         title="Progress."
         intro="Your Website progress will be fecth here, password or personals data 'll not be displayed."
-      ></SimpleLayout>
+      >
         <nav aria-label="Progress">
           <ol
             role="list"
@@ -104,7 +103,7 @@ export default function AppForm() {
           </ol>
         </nav>
         <Image className="mt-8 relative rounded-lg object-cover shadow-lg" src={image1} alt="Capt" />
-      </Container>
+      </SimpleLayout>
     </>
   )
 }
