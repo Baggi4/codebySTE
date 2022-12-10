@@ -64,12 +64,12 @@ export function Footer() {
               </div>
               <div className="mt-8 flex justify-center space-x-6">
                 <SocialLink
-                  href="https://twitter.com"
+                  href="https://twitter.com/StevenMadec"
                   aria-label="Follow on Twitter"
                   icon={TwitterIcon}
                 />
                 <SocialLink
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/stevenmadec/"
                   aria-label="Follow on Instagram"
                   icon={InstagramIcon}
                 />
