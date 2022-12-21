@@ -173,9 +173,9 @@ export default function Home({ articles }) {
         <title>Steven.M - Web developer, integrator</title>
         <meta
           name="description"
-          content="I’m Steven, a web developer, integrator based in Paris, France.
+          content="I&apos;m Steven, a web developer, integrator based in Paris, France.
            I work in development of a platform to buy & sell socials media accounts (Tiktok & Instagram),
-           it will be launch at the beginning 2023, i hope so."
+           it will be launched at the beginning 2023, hopefully."
         />
       </Head>
       <Container className="mt-9">
@@ -184,7 +184,7 @@ export default function Home({ articles }) {
             Web developer, integrator
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Steven, a web developer, integrator based in Paris, France. I
+            I&apos;m Steven, a web developer, integrator based in Paris, France. I
             currently work in development of a platform to buy & sell socials
             media accounts, it will be launch at the beginning 2023, i hope so.
           </p>

@@ -2,7 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import image4 from '@/images/photos/banner_3.png'
-import image5 from '@/images/photos/Capt_5.png'
+import logoThirdweb from '@/images/logos/ThirdWeb-logo.jpg'
+
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Section } from '@/components/Section'
@@ -27,13 +28,13 @@ function LinkIcon(props) {
         fillRule="evenodd"
         d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z"
         clipRule="evenodd"
-        className='ml-1.5 h-5 w-5 fill-zinc-100'
+        className="ml-1.5 h-5 w-5 fill-zinc-100"
       />
       <path
         fillRule="evenodd"
         d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z"
         clipRule="evenodd"
-        className='ml-1.5 h-5 w-5 fill-zinc-100'
+        className="ml-1.5 h-5 w-5 fill-zinc-100"
       />
     </svg>
   )
@@ -41,20 +42,22 @@ function LinkIcon(props) {
 
 const projects = [
   {
-    name: 'KawaE',
-    label: 'Shopify Ecommerce',
-    description: 'Headless ecommerce powered by Vercel & Shopify',
+    name: 'Occount',
+    label: 'Shopify Headless Ecommerce',
+    description: 'Headless ecommerce pwd by Vercel & Shopify',
     link: {
-      href: 'https://nextjs-demo-ecommerce-psr0vi9iw-codebyste.vercel.app',
+      href: 'https://nextjs-demo-ecommerce-codebyste.vercel.app/',
     },
     image: image4,
+    status: 'online',
   },
   {
-    name: 'Remix',
-    label: 'Shopify Digital Ecommerce',
-    description: 'Headless digital ecommerce',
-    link: { href: 'https://remixshopify.mcan.sh' },
-    image: image5,
+    name: 'NFT Gated Website',
+    label: 'Web3 NFT Gated Website',
+    description: 'The Future',
+    link: { href: '#' },
+    image: logoThirdweb,
+    progress: 'soon',
   },
 ]
 
@@ -63,51 +66,52 @@ export default function Work() {
     <>
       <Head>
         <title>Work - codebySte</title>
-        <meta name="description" content="I’ve build many ecomerce website" />
+        <meta name="description" content="I actually work on this websites" />
       </Head>
       <SimpleLayout
         title="Let's build something new."
-        intro="Lets take a look of this examples of my projects build."
+        intro="Lets take a look of my projects build."
       >
-        <ul
-          role="list"
-          className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
-        >
+        <div className="mt-6 grid md:grid-cols-2 gap-20 sm:grid-cols-1">
           {projects.map((project) => (
-            <Card as="li" key={project.name}>
-              <div className="space-y-4">
-                <div className="aspect-w-3 aspect-h-2">
-                  <Image
-                    className="relative z-40 rounded-lg object-cover shadow-lg "
-                    src={project.image}
-                    alt=""
-                  />
-                </div>
-                <h2 className="mt-6 text-xl font-semibold text-zinc-800 dark:text-zinc-100">
-                  <Card.Link href={project.link.href} target="_blank">
+              <div key={project.name} className="group relative">
+                <Card.Link href={project.link.href}>
+                  <div className="aspect-w-4 aspect-h-3 overflow-hidden rounded-lg bg-gray-100">
+                    <Image
+                      className="object-cover object-center shadow-lg "
+                      src={project.image}
+                      alt={project.alt}
+                    />
+                    <div
+                      className="flex items-end p-4 opacity-0 group-hover:opacity-100"
+                      aria-hidden="true"
+                    >
+                      <div className="w-full rounded-md bg-gray-100 bg-opacity-75 py-2 px-4 text-center text-sm font-medium text-gray-900 backdrop-blur backdrop-filter">
+                        Preview
+                      </div>
+                    </div>
+                  </div>
+                  <h2 className="mt-4 flex items-center justify-between space-x-8 text-xl font-semibold text-zinc-800 dark:text-zinc-100">
                     {project.name}
-                  </Card.Link>
-                </h2>
-                <span className="relative z-20 text-sm text-teal-500">
-                  {project.label}
-                </span>
+                  </h2>
+                  <div className="relative z-10 float-right">
+                    <span className="py-0.75 flex rounded-full bg-green-100 px-4 text-base font-medium text-green-800">
+                      {project.status}
+                    </span>
+                    <span className="py-0.75 flex rounded-full bg-yellow-100 px-4 text-base font-medium text-yellow-900">
+                      {project.progress}
+                    </span>
+                  </div>
+                  <span className="relative z-20 text-sm text-teal-500">
+                    {project.label}
+                  </span>
 
-                <Card.Description>{project.description}</Card.Description>
-
-                <Button
-                  type="button"
-                  className="inline-flex items-center rounded-lg text-base font-semibold py-3 px-4 bg-slate-900 text-white"
-                >
-                  <span className="ml-2">Live Demo</span>
-                  <LinkIcon
-                    className="h-6 w-6 flex-none pl-1"
-                    target="_blank"
-                  />
-                </Button>
+                  <Card.Description>{project.description}</Card.Description>
+                </Card.Link>
               </div>
-            </Card>
+            
           ))}
-        </ul>
+        </div>
       </SimpleLayout>
     </>
   )

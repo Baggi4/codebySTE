@@ -122,16 +122,16 @@ export default function Projects() {
         <title>Features - codebySte</title>
         <meta
           name="description"
-          content="Things I’ve made trying to put my dent in the universe."
+          content="Things I&apos;ve made trying to put my dent in the universe."
         />
       </Head>
       <SimpleLayout
         title="Features"
-        intro="I’ve worked on multiples Projects and i show these features that I’m most proud to work with."
+        intro="I&apos;ve worked on multiples Projects and i show these features that I&apos;m most proud to work with."
       >
         <ul
           role="list"
-          className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-x-16 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
         >
           {projects.map((project) => (
             <Card as="li" key={project.name}>
@@ -159,11 +159,11 @@ export default function Projects() {
       </SimpleLayout>
       <SimpleLayout
         title="Web3"
-        intro="Im also learn a lot about the Web 3, decentralized web and NFT."
+        intro="I&apos;m also learn a lot about the Web 3, decentralized web and NFT."
       >
         <ul
           role="list"
-          className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-x-16 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
         >
           {web3.map((project) => (
             <Card as="li" key={project.name}>
@@ -191,11 +191,11 @@ export default function Projects() {
       </SimpleLayout>
       <SimpleLayout
         title="Ai"
-        intro="Actually, I try & learn how to use these two AI tools. Thanks E.Musk & Sam Altman !"
+        intro="Actually, I&apos;m trying & learn how to use these two AI tools. Thanks E.Musk & Sam Altman !"
       >
         <ul
           role="list"
-          className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-x-16 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
         >
           {ai.map((project) => (
             <Card as="li" key={project.name}>

@@ -67,26 +67,31 @@ export function Footer() {
                   href="https://twitter.com/StevenMadec"
                   aria-label="Follow on Twitter"
                   icon={TwitterIcon}
+                  target="_blank"
                 />
                 <SocialLink
                   href="https://www.instagram.com/stevenmadec/"
                   aria-label="Follow on Instagram"
                   icon={InstagramIcon}
+                  target="_blank"
                 />
                 <SocialLink
-                  href="https://github.com"
+                  href="https://github.com/Baggi4"
                   aria-label="Follow on GitHub"
                   icon={GitHubIcon}
+                  target="_blank"
                 />
                 <SocialLink
                   href="https://discord.com/users/Baggi4"
                   aria-label="Follow on GitHub"
                   icon={DiscordIcon}
+                  target="_blank"
                 />
                 <SocialLink
                   href="mailto:codebyste@gmail.com"
                   aria-label="Follow on GitHub"
                   icon={MailIcon}
+                  target="_blank"
                 />
               </div>
               <p className="mt-8 text-center  text-sm text-zinc-400 dark:text-zinc-500">
