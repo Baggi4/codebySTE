@@ -186,7 +186,7 @@ export default function Home({ articles }) {
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I&apos;m Steven, a web developer, integrator based in Paris, France. I
             currently work in development of a platform to buy & sell socials
-            media accounts, it will be launch at the beginning 2023, i hope so.
+            media accounts, it will be launched at the beginning 2023, hopefully.
           </p>
         </div>
       </Container>
