@@ -4,7 +4,6 @@ import Image from 'next/image'
 import image4 from '@/images/photos/banner_3.png'
 import logoThirdweb from '@/images/logos/ThirdWeb-logo.jpg'
 
-import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Section } from '@/components/Section'
 import { SimpleLayout } from '@/components/SimpleLayout'
@@ -69,47 +68,46 @@ export default function Work() {
         <meta name="description" content="I actually work on this websites" />
       </Head>
       <SimpleLayout
-        title="Let's build something new."
-        intro="Lets take a look of my projects build."
+        title="My Building Project"
+        intro="My listed projects are here."
       >
-        <div className="mt-6 grid md:grid-cols-2 gap-20 sm:grid-cols-1">
+        <div className="mt-6 grid gap-20 sm:grid-cols-1 md:grid-cols-2">
           {projects.map((project) => (
-              <div key={project.name} className="group relative">
-                <Card.Link href={project.link.href}>
-                  <div className="aspect-w-4 aspect-h-3 overflow-hidden rounded-lg bg-gray-100">
-                    <Image
-                      className="object-cover object-center shadow-lg "
-                      src={project.image}
-                      alt={project.alt}
-                    />
-                    <div
-                      className="flex items-end p-4 opacity-0 group-hover:opacity-100"
-                      aria-hidden="true"
-                    >
-                      <div className="w-full rounded-md bg-gray-100 bg-opacity-75 py-2 px-4 text-center text-sm font-medium text-gray-900 backdrop-blur backdrop-filter">
-                        Preview
-                      </div>
+            <div key={project.name} className="group relative">
+              <Card.Link href={project.link.href}>
+                <div className="aspect-w-4 aspect-h-3 overflow-hidden rounded-lg bg-gray-100">
+                  <Image
+                    className="object-cover object-center shadow-lg "
+                    src={project.image}
+                    alt={project.alt}
+                  />
+                  <div
+                    className="flex items-end p-4 opacity-0 group-hover:opacity-100"
+                    aria-hidden="true"
+                  >
+                    <div className="w-full rounded-md bg-gray-100 bg-opacity-75 py-2 px-4 text-center text-sm font-medium text-gray-900 backdrop-blur backdrop-filter">
+                      Preview
                     </div>
                   </div>
-                  <h2 className="mt-4 flex items-center justify-between space-x-8 text-xl font-semibold text-zinc-800 dark:text-zinc-100">
-                    {project.name}
-                  </h2>
-                  <div className="relative z-10 float-right">
-                    <span className="py-0.75 flex rounded-full bg-green-100 px-4 text-base font-medium text-green-800">
-                      {project.status}
-                    </span>
-                    <span className="py-0.75 flex rounded-full bg-yellow-100 px-4 text-base font-medium text-yellow-900">
-                      {project.progress}
-                    </span>
-                  </div>
-                  <span className="relative z-20 text-sm text-teal-500">
-                    {project.label}
+                </div>
+                <h2 className="mt-4 flex items-center justify-between space-x-8 text-xl font-semibold text-zinc-800 dark:text-zinc-100">
+                  {project.name}
+                </h2>
+                <div className="relative z-10 float-right">
+                  <span className="py-0.75 flex rounded-full bg-green-100 px-4 text-base font-medium text-green-800">
+                    {project.status}
                   </span>
+                  <span className="py-0.75 flex rounded-full bg-yellow-100 px-4 text-base font-medium text-yellow-900">
+                    {project.progress}
+                  </span>
+                </div>
+                <span className="relative z-20 text-sm text-teal-500">
+                  {project.label}
+                </span>
 
-                  <Card.Description>{project.description}</Card.Description>
-                </Card.Link>
-              </div>
-            
+                <Card.Description>{project.description}</Card.Description>
+              </Card.Link>
+            </div>
           ))}
         </div>
       </SimpleLayout>

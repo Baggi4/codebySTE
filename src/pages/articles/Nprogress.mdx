@@ -1,0 +1,63 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import imgNprogress from '../../images/photos/aWmwyJ3pJ.gif'
+import imgNprogress1 from '../../images/photos/nprogress-img.png'
+
+export const meta = {
+  author: 'Ste',
+  date: '2022-12-12',
+  title: 'How to add routing loader using nprogress in Next.js? (easy)',
+  description: 'Integrate nprogress to your Nextjs app',
+}
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+<Image src={imgNprogress} alt="Nprogress-bar" />
+
+## 1. Install nprogress
+
+You can use npm, yarn or pnpm to do this, just install nprogress
+
+```c
+npm i nprogress
+
+# If you're using TypeScript, install this too
+npm i -D @types/nprogress
+```
+
+## 2. Create the nprogress.css file
+
+The nprogress package ships with a CSS file which it needs but you have to
+import it in the \_app.js file, so you can create a nprogress.css file in your
+styles folder and copy/paste styles from this 
+<a href="https://unpkg.com/nprogress@0.2.0/nprogress.css" target="_blank" withoutrel="noreferrer">CDN</a>
+
+<Image src={imgNprogress1} alt="Nprogress-bar" />
+
+After saving the file, you can import it into  _app.js file.
+
+## 3. Use Router events to show the progress bar
+```c
+// _app.js
+import Router from "next/router";
+import nProgress from "nprogress";
+import "../styles/globals.css";
+import "../styles/nprogress.css";
+
+Router.events.on("routeChangeStart", nProgress.start);
+Router.events.on("routeChangeError", nProgress.done);
+Router.events.on("routeChangeComplete", nProgress.done);
+
+function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />;
+}
+
+export default MyApp;
+```
+
+When the routeChangeStart event fires, we start the progress bar by using nProgress.start function.
+
+Don't invoke the function like nProgress.start(), pass it without the parenthesis because there should be a callback function in the events.
+
+And when the other two events routeChangeError, routeChangeComplete occur, we simply pass in nProgress.done which completes the progress bar.
+
+And that's it 🥳 !

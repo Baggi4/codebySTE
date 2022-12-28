@@ -1,7 +1,11 @@
 import { useEffect, useRef } from 'react'
+import { useRouter } from 'next/router'
 
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
+
+import NProgress from 'nprogress'
+import "../styles/nprogress.css";
 
 import '@/styles/tailwind.css'
 import 'focus-visible'
@@ -18,7 +22,11 @@ function usePrevious(value) {
 
 export default function App({ Component, pageProps, router }) {
   let previousPathname = usePrevious(router.pathname)
-
+  useEffect(() => {
+    router.events.on('routeChangeStart', () => NProgress.start())
+    router.events.on('routeChangeComplete', () => NProgress.done())
+    router.events.on('routeChangeError', () => NProgress.done())
+  })
   return (
     <>
       <div className="fixed inset-0 flex justify-center sm:px-8">

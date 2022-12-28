@@ -5,8 +5,10 @@ import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 
 import logoStripe from '@/images/logos/stripe.png'
-import logoPhotoshop from '@/images/logos/Ps.png'
+import logoCloudinary from '@/images/logos/cloudinary_cloud_glyph_512x512.png'
+import logoAuth from '@/images/logos/logo-sm.png'
 import logoShopify from '@/images/logos/shopify.png'
+import logoSendgrid from '@/images/logos/sendgrid-logo.png'
 import logoVercel from '@/images/logos/vercel.png'
 import logoTailwind from '@/images/logos/Tailwind_CSS_Logo.svg.png'
 import logoNextjs from '@/images/logos/next-js-logo.png'
@@ -20,13 +22,7 @@ import logoThirdweb from '@/images/logos/ThirdWeb-logo.jpg'
 import logoEth from '@/images/logos/eth-hd-logo.png'
 
 const projects = [
-  {
-    name: 'Sanity',
-    description:
-      'Sanity is the CMS platform for structured content that powers remarkable digital experiences.',
-    link: { href: 'https://www.sanity.io/', label: 'sanity.io' },
-    logo: logoSanity,
-  },
+  
   {
     name: 'Shopify',
     description:
@@ -47,6 +43,14 @@ const projects = [
     link: { href: 'https://www.netlify.com/', label: 'netlify.com' },
     logo: logoNetlify,
   },
+
+    {
+    name: 'Sendgrid',
+    description:
+      'SendGrid delivers your transactional and marketing emails through the world largest cloud-based email delivery platform.',
+    link: { href: 'https://www.sendgrid.com/', label: 'sendgrid.com' },
+    logo: logoSendgrid,
+  },
   {
     name: 'Nextjs',
     description:
@@ -60,8 +64,34 @@ const projects = [
     link: { href: 'https://vercel.com', label: 'vercel.com' },
     logo: logoVercel,
   },
+    {
+    name: 'Tailwind',
+    description: 'Rapidly build modern websites without ever leaving your HTML.',
+    link: { href: 'https://tailwindcss.com', label: 'tailwindcss.com' },
+    logo: logoTailwind,
+  },
+  {
+    name: 'Authjs',
+    description: 'The Nextjs Authentification.',
+    link: { href: 'https://authjs.dev', label: 'Authjs.com' },
+    logo: logoAuth,
+  },
+  {
+    name: 'Sanity',
+    description:
+      'Sanity is the CMS platform for structured content that powers remarkable digital experiences.',
+    link: { href: 'https://www.sanity.io/', label: 'sanity.io' },
+    logo: logoSanity,
+  },
+  {
+    name: 'Cloudinary',
+    description:
+      'Cloudinary is the CMS content platform covering everything from image - video uploads, storage, manipulations, optimizations to delivery.',
+    link: { href: 'https://www.cloudinary.com/', label: 'cloudinary.com' },
+    logo: logoCloudinary,
+  },
 ]
-const web3 = [  
+const web3 = [
   {
     name: 'Metamask',
     description: 'Web3 wallet extension, you can add it to your browser.',
@@ -100,7 +130,10 @@ const ai = [
     name: 'Dall-e-2',
     description:
       'Dall-e-2 is a prompt image generator, hard to understand at the beginning but magic in the right fingers.',
-    link: { href: 'https://openai.com/dall-e-2//', label: 'dall-e-2.openai.com' },
+    link: {
+      href: 'https://openai.com/dall-e-2//',
+      label: 'dall-e-2.openai.com',
+    },
     logo: logoOpenAi2,
   },
 ]
@@ -122,12 +155,12 @@ export default function Projects() {
         <title>Features - codebySte</title>
         <meta
           name="description"
-          content="Things I&apos;ve made trying to put my dent in the universe."
+          content="Things I've made trying to put my dent in the universe."
         />
       </Head>
       <SimpleLayout
         title="Features"
-        intro="I&apos;ve worked on multiples Projects and i show these features that I&apos;m most proud to work with."
+        intro="I've worked on multiples Projects and i show these features that I'm most proud to work with."
       >
         <ul
           role="list"
@@ -159,7 +192,7 @@ export default function Projects() {
       </SimpleLayout>
       <SimpleLayout
         title="Web3"
-        intro="I&apos;m also learn a lot about the Web 3, decentralized web and NFT."
+        intro="I'm also learn a lot about the Web 3, decentralized web and NFT."
       >
         <ul
           role="list"
@@ -191,7 +224,7 @@ export default function Projects() {
       </SimpleLayout>
       <SimpleLayout
         title="Ai"
-        intro="Actually, I&apos;m trying & learn how to use these two AI tools. Thanks E.Musk & Sam Altman !"
+        intro="Actually, I'm trying & learn how to use these two AI tools. Thanks E.Musk & Sam Altman !"
       >
         <ul
           role="list"

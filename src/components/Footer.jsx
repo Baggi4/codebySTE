@@ -60,7 +60,7 @@ export function Footer() {
                 <NavLink href="/features">Features</NavLink>
                 <NavLink href="/work">Work</NavLink>
                 <NavLink href="/purchase">Purchase</NavLink>
-                <NavLink href="/uses">Uses</NavLink>
+                <NavLink href="/code">Code</NavLink>
               </div>
               <div className="mt-8 flex justify-center space-x-6">
                 <SocialLink
