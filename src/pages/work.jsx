@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import image4 from '@/images/photos/banner_3.png'
+import image5 from '@/images/photos/banner_7.png'
 import logoThirdweb from '@/images/logos/ThirdWeb-logo.jpg'
 
 import { Card } from '@/components/Card'
@@ -58,6 +59,14 @@ const projects = [
     image: logoThirdweb,
     progress: 'soon',
   },
+  {
+    name: 'NFT Marketplace',
+    label: 'NFT',
+    description: 'Buy & Sell my NFT',
+    link: { href: '#' },
+    image: image5,
+    progress: 'soon',
+  },
 ]
 
 export default function Work() {
@@ -68,8 +77,8 @@ export default function Work() {
         <meta name="description" content="I actually work on this websites" />
       </Head>
       <SimpleLayout
-        title="My Building Project"
-        intro="My listed projects are here."
+        title="Projects"
+        intro="These are the projects im already working on."
       >
         <div className="mt-6 grid gap-20 sm:grid-cols-1 md:grid-cols-2">
           {projects.map((project) => (

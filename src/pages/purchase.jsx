@@ -2,9 +2,11 @@
 import Head from 'next/head'
 
 import Image from 'next/image'
-import imgSubscribe from '@/images/photos/banner_4.png'
-import imgAuth from '@/images/photos/banner_2.png'
+import imgAuth from '@/images/photos/banner_4.png'
+import imgSubscribe from '@/images/photos/banner_2.png'
 import imageCarrd from '@/images/photos/Carrd.png'
+import imgFusion from '@/images/photos/Capt_5.png'
+import imgLooper from '@/images/photos/banner_8.png'
 
 import { Card } from '@/components/Card'
 import { Section } from '@/components/Section'
@@ -33,42 +35,43 @@ function Tool({ title, href, children }) {
 const products = [
   {
     id: 1,
-    name: 'Lande',
+    name: 'Landing',
     category: 'Landing-one-page',
-    price: '$189',
+    progress: 'soon',
     imageSrc: imageCarrd,
     imageAlt:
       'Payment application dashboard screenshot with transaction table, financial highlights, and main clients on colorful purple background.',
-    link: { href: '/client/landing' },
+    link: { href: '#' },
+  },
+  {
+    id: 1,
+    name: 'Looper',
+    category: 'One-page ecommerce with Stripe',
+    price: '$ 799',
+    imageSrc: imgLooper,
+    imageAlt:
+      'One-page ecommerce for small-business selling products',
+    link: { href: 'https://stripe-nextjs-ecommerce.vercel.app/' },
   },
   {
     id: 2,
     name: 'Fusion',
-    category: 'UI',
-    price: '$489',
-    imageSrc: imageCarrd,
+    category: 'Digital Products Ecommerce',
+    price: '$ 1499',
+    imageSrc: imgFusion,
     imageAlt:
-      'Payment application dashboard screenshot with transaction table, financial highlights, and main clients on colorful purple background.',
-    link: { href: '/' },
+      'Digital Products Ecommerce direct-to-customer with Sanity && Stripe',
+    link: { href: 'https://remixshopify.mcan.sh/' },
   },
   {
     id: 3,
     name: 'Subscription-payments',
-    category: 'UI',
-    price: '$1449',
-    imageSrc: imgAuth,
+    category: 'Saas Subscribing payment with Sripe & Supabase',
+    price: '$ 1999',
+    imageSrc: imgSubscribe,
     imageAlt:
       'Payment application dashboard screenshot with transaction table, financial highlights, and main clients on colorful purple background.',
     link: { href: 'https://subscription-payments.vercel.app/' },
-  },
-  {
-    id: 4,
-    name: 'Next-Auth',
-    category: 'UI',
-    price: '$1449',
-    imageSrc: imgSubscribe,
-    imageAlt: 'nextjs-mysql-auth',
-    link: { href: 'https://nextjs-mysql-auth.vercel.app/' },
   },
   // More products...
 ]
@@ -78,7 +81,7 @@ const teamplates = [
     name: 'Next-Auth',
     category: 'UI',
     price: '$19',
-    imageSrc: imgSubscribe,
+    imageSrc: imgAuth,
     imageAlt: 'nextjs-mysql-auth',
     link: { href: 'https://nextjs-mysql-auth.vercel.app/' },
   },
@@ -95,12 +98,12 @@ export default function Purchase() {
       </Head>
       <SimpleLayout
         title="Purchase"
-        intro="You decide, i build your own website. Starting at 189$"
+        intro="You decide, i build your own website. Starting at 299$"
         >
         <div className="mt-6 grid gap-20 sm:grid-cols-1 md:grid-cols-2">
           {products.map((product) => (
             <div key={product.id} className="group relative">
-              <Card.Link href={product.link.href} target="_blank">
+              <Card.Link href={product.link.href}>
                 <div className="aspect-w-4 aspect-h-3 overflow-hidden rounded-lg bg-gray-100">
                   <Image
                     src={product.imageSrc}
@@ -123,10 +126,13 @@ export default function Purchase() {
                       {product.name}
                     </a>
                   </h3>
-                  <div className="relative z-10 float-right">
+                  <div className="relative z-10 float-right columns-1">
                     <span className="py-0.75 flex rounded-full bg-green-100 px-4 text-base font-medium text-green-800">
                       {product.price}
                     </span>
+                     <span className="py-0.75 flex rounded-full bg-yellow-100 px-4 text-base font-medium text-yellow-900">
+                    {product.progress}
+                  </span>
                   </div>
                 </div>
                 <p className="mt-1 text-sm text-gray-500">{product.category}</p>
@@ -142,7 +148,7 @@ export default function Purchase() {
         <div className="mt-6 grid gap-20 sm:grid-cols-1 md:grid-cols-2">
           {teamplates.map((product) => (
             <div key={product.id} className="group relative">
-              <Card.Link href={product.link.href} target="_blank">
+              <Card.Link href={product.link.href}>
                 <div className="aspect-w-4 aspect-h-3 overflow-hidden rounded-lg bg-gray-100">
                   <Image
                     src={product.imageSrc}

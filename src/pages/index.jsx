@@ -6,11 +6,11 @@ import clsx from 'clsx'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 
-import image1 from '@/images/photos/image-1.jpg'
-import image2 from '@/images/photos/image-2.jpg'
+import image1 from '@/images/photos/image-5.jpg'
+import image2 from '@/images/photos/DALL·E 2022-12-30 14.16.33 - an astronaut learning on his computer, cyberpunk.png'
 import image3 from '@/images/photos/image-3.jpg'
-import image4 from '@/images/photos/image-4.jpg'
-import image5 from '@/images/photos/image-5.jpg'
+import image4 from '@/images/photos/bosss_123.png'
+import image5 from '@/images/photos/kimono_02.png'
 import logoCodebySTE from '@/images/logos/Ste-logo.png'
 import logoOc from '@/images/logos/openclassrooms.jpeg'
 
@@ -174,8 +174,7 @@ export default function Home({ articles }) {
         <meta
           name="description"
           content="I&apos;m Steven, a web developer, integrator based in Paris, France.
-           I work in development of a platform to buy & sell socials media accounts (Tiktok & Instagram),
-           it will be launched at the beginning 2023, hopefully."
+           I work in development of a platform to buy & sell socials media accounts (Tiktok & Instagram)"
         />
       </Head>
       <Container className="mt-9">
@@ -186,7 +185,7 @@ export default function Home({ articles }) {
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I&apos;m Steven, a web developer, integrator based in Paris, France. I
             currently work in development of a platform to buy & sell socials
-            media accounts, it will be launched at the beginning 2023, hopefully.
+            media accounts( Tiktok & Instagram ).
           </p>
         </div>
       </Container>
